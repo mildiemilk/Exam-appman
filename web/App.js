@@ -1,10 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router,Route } from 'react-router-dom';
+import Login from './components/Login';
 
 class App extends React.Component {
     render() {
-        // start your code here
-        return <h1>hello world</h1>;
+        return (
+            <Router>
+                <Route exact path="/" component={Login}/>
+            </Router>  
+        )
     }
 }
 
-export default App;
+export default App
